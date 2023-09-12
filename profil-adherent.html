@@ -29,14 +29,11 @@
                             <a class="nav-link active" aria-current="page" href="./index.html">Reservation</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Devis</a>
+                            <a class="nav-link" href="">Comment ça marche</a>
+                        </li>                   
+                        <li class="nav-item">
+                            <a class="nav-link" href="">FAQ</a>
                         </li> 
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Comment ça marche</a>
-                        </li>  
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Se connecter</a>
-                        </li>                  
                     </ul>
                 </div>
             </div>
@@ -137,7 +134,7 @@
         const url = new URL(location.href)
         const id = url.searchParams.get('id_profil')
         const getData = async(id) =>{
-            return await fetch(`http://localhost:3000/api/v1/adherent/${id}`)
+            return await fetch(`https://comfortable-shawl-cow.cyclic.app/api/v1/adherent/${id}`)
                             .then((res)=> res.json())
                             .then((data)=> document.getElementById('propos').innerHTML = template(data))
                             .catch(err=>console.log(err))

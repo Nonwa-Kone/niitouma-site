@@ -1,7 +1,7 @@
 const getAdherent = async() =>{
     const requete = await fetch("http://localhost:3000/api/v1/adherent")
     const data = await requete.json()
-    const datas = afficheLesAdherentAuHasard(data);
+    const datas = afficheLesAdherentAuHasard(data,2);
     datas.map(adherent => {
         document.getElementById('section-content').innerHTML += `
         <div class="row mb-4 p-lg-5 p-md-3 shadow rounded-5 bg-light">
@@ -26,16 +26,16 @@ const getAdherent = async() =>{
  * @param {number} number La limite de l'affichage
  * @return {array} Une liste de 10 Adherent au hasard
  */
-const afficheLesAdherentAuHasard = (data, stoped) =>{
-    let newData = [...data]
+const afficheLesAdherentAuHasard = (data) =>{
+    let newData = data
     // let firstIndex = Math.floor(Math.random() * data.length)
-    let lastIndex = Math.floor(Math.random() * (data.length - 3 + 1) +  3)
+    let lastIndex = Math.floor(Math.random() * (data.length))
 
-    console.log(typeof lastIndex);
-    newData = newData.slice(lastIndex, stoped)
+    newData = newData.slice(lastIndex, -1)
     return newData
 }
 
 
+getAdherent().then(response => response)
 
-console.log(getAdherent());
+
