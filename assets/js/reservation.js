@@ -1,41 +1,51 @@
-const form = document.querySelector('#form')
+const form = document.querySelector("#form");
 
-form.addEventListener('submit', async function(event){
-    event.preventDefault()
-    
-    const url = new URL(location.href)
-    const id = url.searchParams.get('id')
+form.addEventListener("submit", async function (event) {
+  event.preventDefault();
 
-    const formData = new FormData(form)
-  
-    let nom = formData.get('nom')
-    let prenom = formData.get('prenom')
-    let telephone = formData.get('telephone')
-    let quartier = formData.get('quartier')
-    let ville = formData.get('ville')
-    let email = formData.get('email')
-    let message = formData.get('message')
+  const url = new URL(location.href);
+  const id = url.searchParams.get("id");
 
-    let data = { ville: ville, quartier: quartier, nom: nom, prenom: prenom, email: email, adherent: id }
-    
-    const result = await fetch('https://comfortable-shawl-cow.cyclic.app/api/v1/reservation', {
-        method: "POST",
-        mode: "no-cors",
-        headers: {
-            "Content-Type": "application/json" // application/x-www-form-urlencoded
-        },
-        body: JSON.stringify(data)
-    })
+  const formData = new FormData(form);
 
-    const response = await result.json()
+  let nom = formData.get("nom");
+  let prenom = formData.get("prenom");
+  let telephone = formData.get("telephone");
+  let quartier = formData.get("quartier");
+  let ville = formData.get("ville");
+  let email = formData.get("email");
+  let message = formData.get("message");
 
-    Swal.fire({
-        icon: 'success',
-        title: response.message,
-        showConfirmButton: true,
-    }).then((result)=>{
-        if (result.isConfirmed) {
-           window.location.href= "index.html"
-        }
-    })
-})
+  let data = {
+    ville: ville,
+    quartier: quartier,
+    nom: nom,
+    prenom: prenom,
+    email: email,
+    adherent: id,
+  };
+
+  const result = await fetch(
+    "https://comfortable-shawl-cow.cyclic.app/api/v1/reservation",
+    {
+      method: "POST",
+      mode: "no-cors",
+      headers: {
+        "Content-Type": "application/json", // application/x-www-form-urlencoded
+      },
+      body: JSON.stringify(data),
+    },
+  );
+
+  const response = await result.json();
+
+  Swal.fire({
+    icon: "success",
+    title: response.message,
+    showConfirmButton: true,
+  }).then((result) => {
+    if (result.isConfirmed) {
+      window.location.href = "index.html";
+    }
+  });
+});
