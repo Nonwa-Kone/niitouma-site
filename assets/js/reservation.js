@@ -14,7 +14,7 @@ form.addEventListener("submit", async function (event) {
   let quartier = formData.get("quartier");
   let ville = formData.get("ville");
   let email = formData.get("email");
-  let message = formData.get("message");
+  let msg = formData.get("message");
 
   let data = {
     ville: ville,
@@ -23,25 +23,27 @@ form.addEventListener("submit", async function (event) {
     prenom: prenom,
     email: email,
     adherent: id,
+    message: msg,
   };
 
-  const result = await fetch(
-    "https://comfortable-shawl-cow.cyclic.app/api/v1/reservation",
-    {
-      method: "POST",
-      mode: "no-cors",
-      headers: {
-        "Content-Type": "application/json", // application/x-www-form-urlencoded
-      },
-      body: JSON.stringify(data),
-    },
-  );
+  console.log(data);
 
-  const response = await result.json();
+  const result = await fetch("http://localhost:3000/api/v1/reservation", {
+    method: "POST",
+    mode: "cors",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(data),
+  });
+
+  const { message } = await result.json();
+
+  console.log(message);
 
   Swal.fire({
     icon: "success",
-    title: response.message,
+    title: message,
     showConfirmButton: true,
   }).then((result) => {
     if (result.isConfirmed) {

@@ -9,163 +9,340 @@
     <!-- ======= BOOTSTRAP FILE ========-->
     <link rel="stylesheet" href="./assets/vendor/bootstrap-icons/bootstrap-icons.css">
     <link rel="stylesheet" href="./assets/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/vendor/boxicons/css/boxicons.min.css">
+    <link rel="stylesheet" href="./assets/vendor/glightbox/css/glightbox.min.css">
+    <link rel="stylesheet" href="./assets/vendor/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./assets/vendor/owlcarousel/assets/owl.carousel.min.css">
     <!-- ======= CSS FILE ========-->
-    <link rel="stylesheet" href="./assets/css/navbar.css">
-    <link rel="stylesheet" href="./assets/css/hero.css">
+    <link rel="stylesheet" href="./assets/css/index.css">
 </head>
 <body>
-    <section id="hero" class="container-fluid bg-primary">
-        <!-- ========= NAVBAR ========= -->
+    <nav class="navbar navbar-expand-lg">
         <div class="container">
-            <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="index.html">NIITOUMA</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="./index.html">Reservation</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="">Comment ça marche</a>
-                        </li>                   
-                        <li class="nav-item">
-                            <a class="nav-link" href="">FAQ</a>
-                        </li> 
-                    </ul>
+        <a class="navbar-brand" href="index.html">NIITOUMA</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Accueil</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="chercher-un-artisan.html">Reservation</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link">A propos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link">Services</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link">Contact</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link">Faq</a>
+            </li>
+            </ul>
+        </div>
+        </div>
+    </nav>
+    <main class="container-fluid my-lg-5">
+        <div class="container py-lg-5">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="card p-5" id="propos">
+
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <!-- ======= Portfolio Section ======= -->
+                        <div class="section-title">
+                            <h2>Portfolio</h2>
+                        </div>
+                
+                            <!-- <ul id="portfolio-flters">
+                                <li data-filter="*" class="filter-active">All</li>
+                                <li data-filter=".filter-app">App</li>
+                                <li data-filter=".filter-card">Card</li>
+                                <li data-filter=".filter-web">Web</li>
+                            </ul> -->
+                
+                        <div class="row">
+                            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                                <div class="portfolio-wrap">
+                                    <img src="assets/img/1.jpg" class="img-fluid" alt="">
+                                    <div class="portfolio-info">
+                                        <h4>App 1</h4>
+                                        <p>App</p>
+                                        <div class="portfolio-links">
+                                            <a href="assets/img/1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
+                                            <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+                            <div class="portfolio-wrap">
+                                <img src="assets/img/2.jpg" class="img-fluid" alt="">
+                                <div class="portfolio-info">
+                                <h4>Web 3</h4>
+                                <p>Web</p>
+                                <div class="portfolio-links">
+                                    <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
+                                    <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                                </div>
+                                </div>
+                            </div>
+                            </div>
+                
+                            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                            <div class="portfolio-wrap">
+                                <img src="assets/img/3.jpg" class="img-fluid" alt="">
+                                <div class="portfolio-info">
+                                <h4>App 2</h4>
+                                <p>App</p>
+                                <div class="portfolio-links">
+                                    <a href="assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 2"><i class="bx bx-plus"></i></a>
+                                    <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                                </div>
+                                </div>
+                            </div>
+                            </div>
+                
+                            <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+                            <div class="portfolio-wrap">
+                                <img src="assets/img/4.jpg" class="img-fluid" alt="">
+                                <div class="portfolio-info">
+                                <h4>Card 2</h4>
+                                <p>Card</p>
+                                <div class="portfolio-links">
+                                    <a href="assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2"><i class="bx bx-plus"></i></a>
+                                    <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                                </div>
+                                </div>
+                            </div>
+                            </div>                            
+                        </div>
+                
+                        </div>
+                    </section><!-- End Portfolio Section -->
                 </div>
             </div>
-            </nav>
-            <!-- ========= HERO ========= -->
-            <div id="hero-box" class="p-5">
-                <div class="bg-light" style="background: #fff;">
-                    <div class="row pb-lg-5" id="propos"></div>                
-                </div>
+            <div class="row">
+                
             </div>
         </div>
-    </section>
+    </main>
 
-    <section class="container-xxl bg-dark">
+    <!-- Testimonial Start -->
+    <div class="container-xxl py-5 mb-5">
         <div class="container">
-            <div class="row py-lg-5">
-                <h2 class="mb-lg-5 fw-bold display-3 text-uppercase text-center" style="color: #fff;">Realisations</h2>
-                <div class="rows d-flex">
-                    <div class="col">
-                        <img class="w-100" src="./assets/img/1.jpg" alt="Image realisation" srcset="">
-                    </div>
-                    <div class="col gap-1">
-                        <img class="w-100" src="./assets/img/2.jpg" alt="Image realisation" srcset="">
-                    </div>
-                    <div class="col">
-                        <img class="w-100" src="./assets/img/3.jpg" alt="Image realisation" srcset="">
-                    </div>
-                    <div class="col">
-                        <img class="w-100" src="./assets/img/4.jpg" alt="Image realisation" srcset="">
-                    </div>
-                </div>
+          <div
+            class="text-center mx-auto wow fadeInUp"
+            data-wow-delay="0.1s"
+            style="max-width: 600px"
+          >
+            <h1 class="display-5 mb-5">Ce que disent nos client sur le professionnelle</h1>
+          </div>
+          <div
+            class="owl-carousel testimonial-carousel wow fadeInUp"
+            data-wow-delay="0.3s"
+          >
+            <div class="testimonial-item">
+              <img
+                class="rounded-circle mb-3"
+                src="./assets/img/1.jpg"
+                alt=""
+              />
+              <div>
+                <h2>Kone Nonwa</h2>
+                <cite>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates, eveniet velit! Odit ex, fugiat, illo, delectus reprehenderit suscipit vitae dolore maxime eum architecto tempore praesentium aspernatur ipsam? At, ex beatae.</cite>
+                <strong>Pubié le 10/02/2023 à 10h00</strong>
+              </div>
             </div>
+            <div class="testimonial-item">
+              <img
+                class="rounded-circle mb-3"
+                src="./assets/img/2.jpg"
+                alt=""
+              />
+              <div>
+                <h2>Kone Nonwa</h2>
+                <cite>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates, eveniet velit! Odit ex, fugiat, illo, delectus reprehenderit suscipit vitae dolore maxime eum architecto tempore praesentium aspernatur ipsam? At, ex beatae.</cite>
+                <strong>Pubié le 10/02/2023 à 10h00</strong>
+              </div>
+            </div>
+            <div class="testimonial-item">
+              <img
+                class="rounded-circle mb-3"
+                src="./assets/img/3.jpg"
+                alt=""
+              />
+              <div>
+                <h2>Kone Nonwa</h2>
+                <cite>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates, eveniet velit! Odit ex, fugiat, illo, delectus reprehenderit suscipit vitae dolore maxime eum architecto tempore praesentium aspernatur ipsam? At, ex beatae.</cite>
+                <strong>Pubié le 10/02/2023 à 10h00</strong>
+              </div>
+            </div>
+            <div class="testimonial-item">
+              <img
+                class="rounded-circle mb-3"
+                src="./assets/img/4.jpg"
+                alt=""
+              />
+              <div>
+                <h2>Kone Nonwa</h2>
+                <cite>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates, eveniet velit! Odit ex, fugiat, illo, delectus reprehenderit suscipit vitae dolore maxime eum architecto tempore praesentium aspernatur ipsam? At, ex beatae.</cite>
+                <strong>Pubié le 10/02/2023 à 10h00</strong>
+              </div>
+            </div>
+            <div class="testimonial-item">
+              <img
+                class="rounded-circle mb-3"
+                src="./assets/img/1.jpg"
+                alt=""
+              />
+              <div>
+                <h2>Kone Nonwa</h2>
+                <cite>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates, eveniet velit! Odit ex, fugiat, illo, delectus reprehenderit suscipit vitae dolore maxime eum architecto tempore praesentium aspernatur ipsam? At, ex beatae.</cite>
+                <strong>Pubié le 10/02/2023 à 10h00</strong>
+              </div>
+            </div>            
+          </div>
         </div>
-    </section>
-
+      </div>
+      <!-- Testimonial End -->
     <section class="container-xxl py-lg-5 py-md-4" id="content-profil-adherent">
         <div class="container">
-            <div class="row">
-                <h2 class="mb-lg-5 fw-bold display-3 text-uppercase text-center">commentaires</h2>
-                <div class="col-lg-6 offset-lg-3" id="list-comment">
-                    <div class="card mb-3 p-3 shadow">
-                        <h2>Kone Nonwa</h2>
-                        <cite>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates, eveniet velit! Odit ex, fugiat, illo, delectus reprehenderit suscipit vitae dolore maxime eum architecto tempore praesentium aspernatur ipsam? At, ex beatae.</cite>
-                        <strong>Pubié le 10/02/2023 à 10h00</strong>
-                    </div>
-                    <div class="card p-3 shadow">
-                        <h2>Kone Nonwa</h2>
-                        <cite>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates, eveniet velit! Odit ex, fugiat, illo, delectus reprehenderit suscipit vitae dolore maxime eum architecto tempore praesentium aspernatur ipsam? At, ex beatae.</cite>
-                        <strong>Pubié le 10/02/2023 à 10h00</strong>
-                    </div>
-                </div>
-                <div class="col-lg-6 offset-lg-3 py-lg-5" id="list-comment">
-                    <form action="" method="post" class="">
+            <div
+            class="text-center mx-auto wow fadeInUp"
+                data-wow-delay="0.1s"
+                style="max-width: 600px"
+            >
+                <h1 class="display-5 mb-5">Ajouter votre commentaire</h1>
+            </div>
+            <div class="row py-lg-5">
+                <div class="offset-lg-3 offset-md-3 col-lg-6 col-md-6 col-sm-12 col-xs-12" id="list-comment">
+                    <form method="post" class="">
                         <div class="form-group mb-3">
-                            <label for="nom" class="form-label">Nom et prenom</label><br>
-                            <input type="text" class="form-control">
+                            <label for="username" class="form-label">Nom et prenom</label><br>
+                            <input type="text" name="username" id="username" class="form-control">
                         </div>
                         <div class="form-group mb-3">
-                            <label for="nom" class="form-label">Votre commentaire</label>
-                            <textarea class="form-control" name="" id="" cols="30" rows="10"></textarea>
+                            <label for="note" class="form-label">Note</label>
+                            <input type="number" name="note" id="note" class="form-control">
                         </div>
-                        <button type="submit" name="envoyer" id="envoyer" class="btn btn-outline-primary">Commenter</button>
+                        <div class="form-group mb-3">
+                            <label for="message" class="form-label">Votre commentaire</label>
+                            <textarea class="form-control" name="message" id="message" cols="10" rows="2"></textarea>
+                        </div>
+                        <button type="submit" name="envoyer" id="envoyer" class="btn btn-primary">Commenter</button>
                     </form>
                 </div>
             </div>
         </div>
     </section>
-
-    <section id="footer" class="container-fluid bg-dark text-light py-lg-5">
-        <div class="container border-bottom">
+    <section class="container-fluid footer">
+        <div class="container">
             <div class="row">
-                <div id="localite" class="col">
+                <div class="col-lg-6">
                     <h4>Siège Ouagadougou</h4>
                     <p>Tel: +22605541220</p>
                     <p>Fixe: 2256231524</p>
                     <p>Fax: 25142013</p>
                     <p>Email: contact@niitouma.bf</p>
                 </div>
-                <div id="geo" class="col">
+                <div class="col-lg-6">
                     <h4>Adresse sur map</h4>
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124715.59322311784!2d-1.6192463671391855!3d12.358647356234338!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xe2e95ecceaa44cd%3A0x799f67799c743b8b!2sOuagadougou%2C%20Burkina%20Faso!5e0!3m2!1sfr!2sci!4v1689012009390!5m2!1sfr!2sci" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
         </div>
-        <div class="container p-lg-1">
-            <p class="text-center">Copyrigth @ 2023</p>
+    </section>
+    
+    <section class="container-fluid copyright">
+        <div class="container">
+            <div class="row">
+                <div class="copyright-content">
+                    <p>Copyright @2023</p>
+                </div>
+            </div>
         </div>
     </section>
 
+    <div id="preloader"></div>
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  
+
     <!--=========== VENDOR ==============-->
+    <script src="./assets/vendor/jquery/jquery-3.6.4.min.js"></script>
     <script src="./assets/vendor/aos/aos.js"></script>
-    <!--=========== CDN LINK ============-->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> -->
-    <!--=========== JS FILE ================-->
     <script src="./assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <!-- <script src="./assets/js/serach.js"></script> -->
+    <script src="./assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="./assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="./assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="./assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="./assets/vendor/owlcarousel/owl.carousel.min.js"></script>
     <script>
         const url = new URL(location.href)
         const id = url.searchParams.get('id_profil')
         const getData = async(id) =>{
-            return await fetch(`https://comfortable-shawl-cow.cyclic.app/api/v1/adherent/${id}`)
-                            .then((res)=> res.json())
-                            .then((data)=> document.getElementById('propos').innerHTML = template(data))
-                            .catch(err=>console.log(err))
-                            .finally(()=> console.log("Opération effectué"))
+            return await fetch(`http://localhost:3000/api/v1/adherent/${id}`)
+                .then((res)=> res.json())
+                .then((data)=> document.getElementById('propos').innerHTML = template(data))
+                .catch(err=>console.log(err))
+                .finally(()=> console.log("Opération effectué"))
         }
 
         getData(id)  
         const template = (adherent) =>{
             return (
                 `
-                <div class="row pb-lg-5">
-                    <h2 class="mb-lg-5 fw-bold display-5 text-uppercase text-center">A PROPOS</h2>
-                    <div class="col-lg-6">
-                        <img class="img-thumbnail" src="./assets/img/profil-img.jpg" alt="" srcset="">
-                    </div>
-                    <div class="col-lg-6">
-                        <h1>${adherent.nom} ${adherent.prenom}</h1>
-                        <p>spécialisé dans ${adherent.profession}</p>
-                        <p>Intervient sur ${adherent.domaineInterventions}</p>
-                        <p>Contact : ${adherent.telephone}</p>
-                        <p>habite à ${adherent.ville}</p>
-                        <strong>Cliquez sur reserver pour recevoir les services de ce professionnel</strong>
-                        <div class="py-lg-3">
-                            <a href="./reservation.html?id=${id}"><button type="submit" class="btn btn-primary">Reserver</button></a>
-                            <a href="./index.html"><button type="submit" class="btn btn-dark">Cliquez ici pour rechercher autre professionnel</button></a>
-                        </div>
-                    </div>
+                <img class="img-fluid object-filtre-cover rounded shadow" src="./assets/img/profil-img.jpg" alt="Profile professionnelle">
+                <h1>${adherent.nom} ${adherent.prenom}</h1>
+                <p>spécialisé dans ${adherent.profession}</p>
+                <p>Intervient sur <strong>${adherent.domaineIntervention}</strong></p>
+                <p>Contact : ${adherent.telephone}</p>
+                <p>habite à ${adherent.ville}</p>
+                <div class="btn-group py-lg-3">
+                    <a href="./reservation.html?id=${id}"><button type="submit" class="btn btn-primary">Reserver</button></a>
+                    <a href="./index.html"><button type="submit" class="btn btn-dark">Rechercher autre professionelle</button></a>
                 </div>
                 `
             )
         }
+
+            // Testimonials carousel
+        $(".testimonial-carousel").owlCarousel({
+            autoplay: true,
+            smartSpeed: 1000,
+            center: true,
+            margin: 24,
+            dots: true,
+            loop: true,
+            nav : false,
+            responsive: {
+                0:{
+                    items:1
+                },
+                576:{
+                    items:1
+                },
+                768:{
+                    items:2
+                },
+                992:{
+                    items:3
+                }
+            }
+        });
+
+
     </script>
+    <script src="./assets/js/vendor/main.js"></script>
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/ajouterUnCommentaire.js"></script>
 </body>
 </html>

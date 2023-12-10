@@ -47,11 +47,12 @@
             <div class="row">
                 <div class="col-lg-6">
                     <h5 class="mb-3">Besoin d'un artisan?</h5>
-                    <form action="" method="post">
+                    <form action="./search.html" method="get">
                         <div class="form-group mb-3">
                             <input
                              type="text" 
-                             id="competence" 
+                             name="profession"
+                             id="profession" 
                              placeholder="Entrer un service" 
                              aria-placeholder="Entrer un service"
                              class="form-control"
@@ -61,20 +62,20 @@
                         <div class="form-group mb-3">
                             <input
                              type="text" 
-                             id="competence" 
+                             name="ville"
+                             id="ville" 
                              placeholder="Ou on peut vous trouvez?" 
-                             aria-placeholder="Entrer un service"
+                             aria-placeholder="Ou on peut vous trouvez?"
                              class="form-control"
                             >
                         </div>
 
                         <div class="form-group mb-3">
-                            <a
-                             href="./search.html"
-                             class="btn-primary text-decoration-none"
-                            >
-                            Rechercher
-                            </a>
+                            <button 
+                             class="btn btn-primary"
+                             type="submit">
+                                Rechercher
+                            </button>
                         </div>
                     </form>
                 </div>

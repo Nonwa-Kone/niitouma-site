@@ -5,9 +5,7 @@ import Adherents from "./model/Adherents.js";
 const contentAdherentList = document.getElementById("section-content");
 // Reccuperation des données de nos adherents depuis notre API
 const getData = async () => {
-  const requete = await fetch(
-    "https://comfortable-shawl-cow.cyclic.app/api/v1/adherent",
-  );
+  const requete = await fetch(`http://localhost:3000/api/v1/adherent`);
   const data = await requete.json();
   const datas = filterAdherents(data);
   console.log(datas);
