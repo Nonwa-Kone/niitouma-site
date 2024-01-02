@@ -5,7 +5,9 @@ import Adherents from "./model/Adherents.js";
 const contentAdherentList = document.getElementById("section-content");
 // Reccuperation des données de nos adherents depuis notre API
 const getData = async () => {
-  const requete = await fetch(`http://localhost:3000/api/v1/adherent`);
+  const requete = await fetch(
+    `https://comfortable-shawl-cow.cyclic.app/api/v1/adherent`,
+  );
   const data = await requete.json();
   const datas = filterAdherents(data);
   console.log(datas);
@@ -13,18 +15,18 @@ const getData = async () => {
 
 getData();
 
-const filterAdherents = (data) => {
+const filterAdherents = data => {
   const url = new URL(location.href);
   const profession = url.searchParams.get("profession");
   const ville = url.searchParams.get("ville");
   console.log({ profession, ville });
-  const result = data.filter((adherent) => {
+  const result = data.filter(adherent => {
     return (
       adherent.profession.toLowerCase() === profession.toLowerCase() &&
       adherent.ville.toLowerCase() === ville.toLowerCase()
     );
   });
-  result.map((adherent) => {
+  result.map(adherent => {
     const newAdherent = new Adherents(
       adherent._id,
       adherent.nom,

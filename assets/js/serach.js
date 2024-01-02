@@ -5,5 +5,5 @@ const getData = async () => {
 };
 
 getData()
-  .then((txt) => console.log(txt))
-  .catch((err) => console.log(err));
+  .then(txt => console.log(txt))
+  .catch(err => console.log(err));

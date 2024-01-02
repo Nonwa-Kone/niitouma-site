@@ -1,5 +1,6 @@
 {
     "some": false,
     "SimpleQuote": true,
+    "arrowParens": "avoid",
     "WidthTab": 2
 }

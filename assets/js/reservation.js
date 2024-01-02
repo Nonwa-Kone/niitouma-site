@@ -26,26 +26,25 @@ form.addEventListener("submit", async function (event) {
     message: msg,
   };
 
-  console.log(data);
-
-  const result = await fetch("http://localhost:3000/api/v1/reservation", {
-    method: "POST",
-    mode: "cors",
-    headers: {
-      "Content-Type": "application/json",
+  const result = await fetch(
+    "https://comfortable-shawl-cow.cyclic.app/api/v1/reservation",
+    {
+      method: "POST",
+      mode: "cors",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
     },
-    body: JSON.stringify(data),
-  });
+  );
 
   const { message } = await result.json();
-
-  console.log(message);
 
   Swal.fire({
     icon: "success",
     title: message,
     showConfirmButton: true,
-  }).then((result) => {
+  }).then(result => {
     if (result.isConfirmed) {
       window.location.href = "index.html";
     }
