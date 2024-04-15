@@ -1,19 +1,19 @@
-const url = new URL(location.href);
-const id = url.searchParams.get("id_profil");
+const url = new URL(location.href)
+const id = url.searchParams.get("id_profil")
 const getData = async id => {
   return await fetch(
     `https://comfortable-shawl-cow.cyclic.app/api/v1/adherent/${id}`,
   )
     .then(res => res.json())
     .then(data => {
-      document.getElementById("propos").innerHTML = template(data);
-      templateCommentaire(data);
+      document.getElementById("propos").innerHTML = template(data)
+      templateCommentaire(data)
     })
     .catch(err => console.log(err))
-    .finally(() => console.log("Opération effectué"));
-};
+    .finally(() => console.log("Opération effectué"))
+}
 
-getData(id);
+getData(id)
 const template = adherent => {
   return `
   <img class="img-fluid object-filtre-cover rounded shadow" src="./assets/img/profil-img.jpg" alt="Profile professionnelle">
@@ -26,8 +26,8 @@ const template = adherent => {
     <a href="./reservation.html?id=${id}"><button type="submit" class="btn btn-primary">Reserver</button></a>
     <a href="./index.html"><button type="submit" class="btn btn-dark">Rechercher autre professionelle</button></a>
   </div>
-  `;
-};
+  `
+}
 
 const templateCommentaire = adherent => {
   adherent.commentaire
@@ -46,7 +46,7 @@ const templateCommentaire = adherent => {
         <p><i class="bi bi-star-fill"></i> ${comment.note}</p>
         </div>
       </div>
-    `;
+    `
     })
-    .join(",");
-};
+    .join(",")
+}

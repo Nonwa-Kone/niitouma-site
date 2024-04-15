@@ -1,0 +1,16 @@
+.img-box {
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  min-height: 400px;
+
+  > img {
+    width: 100%;
+    justify-content: flex-end;
+  }
+}
+
+@layer About {
+  .mission .container .row .col-lg-6 {
+  }
+}

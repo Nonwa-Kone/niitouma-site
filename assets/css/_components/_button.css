@@ -1,0 +1,46 @@
+.btn-primary {
+  background-color: var(--primary);
+  font-family: "Poppins Regular", sans-serif;
+  font-size: 18px;
+  padding: 0.5rem 2rem !important;
+  transition: all 0.8s ease-in-out;
+}
+
+.btn-primary:hover {
+  background-color: var(--light);
+  color: var(--primary);
+  outline: none;
+}
+
+/*--------------------------------------------------------------
+# Back to top button
+--------------------------------------------------------------*/
+.back-to-top {
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  right: 15px;
+  bottom: 15px;
+  z-index: 996;
+  background: var(--primary);
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  transition: all 0.4s;
+}
+
+.back-to-top i {
+  font-size: 28px;
+  color: #fff;
+  line-height: 0;
+}
+
+.back-to-top:hover {
+  background: var(--primary);
+  color: #fff;
+}
+
+.back-to-top.active {
+  visibility: visible;
+  opacity: 1;
+}

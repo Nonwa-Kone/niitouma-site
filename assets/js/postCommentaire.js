@@ -1,22 +1,22 @@
 window.addEventListener("DOMContentLoaded", function () {
-  const form = document.querySelector("form");
+  const form = document.querySelector("form")
   form.addEventListener("submit", async e => {
-    e.preventDefault();
+    e.preventDefault()
 
-    const url = new URL(location.href);
-    const id = url.searchParams.get("id_profil");
+    const url = new URL(location.href)
+    const id = url.searchParams.get("id_profil")
 
-    const formData = new FormData(form);
+    const formData = new FormData(form)
 
-    let nom = formData.get("username");
-    let note = formData.get("note");
-    let message = formData.get("message");
+    let nom = formData.get("username")
+    let note = formData.get("note")
+    let message = formData.get("message")
 
     let data = {
       nom: nom,
       note: note,
       message: message,
-    };
+    }
 
     const result = await fetch(
       `https://comfortable-shawl-cow.cyclic.app/api/v1/post-comment/${id}`,
@@ -28,9 +28,9 @@ window.addEventListener("DOMContentLoaded", function () {
         },
         body: JSON.stringify(data),
       },
-    );
+    )
 
-    const { msg } = await result.json();
+    const { msg } = await result.json()
 
     Swal.fire({
       icon: "success",
@@ -38,8 +38,8 @@ window.addEventListener("DOMContentLoaded", function () {
       showConfirmButton: true,
     }).then(result => {
       if (result.isConfirmed) {
-        window.location.href = "";
+        window.location.href = ""
       }
-    });
-  });
-});
+    })
+  })
+})

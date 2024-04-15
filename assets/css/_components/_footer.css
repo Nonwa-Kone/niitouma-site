@@ -1,0 +1,25 @@
+/* Footer */
+.footer {
+  margin-top: 2rem;
+  padding: 5rem;
+  background-color: var(--dark);
+  color: var(--secondary);
+}
+
+/* Copyright */
+.copyright {
+  background-color: var(--grey);
+  color: var(--secondary);
+}
+
+.copyright .container .row .copyright-content {
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.copyright .container .row .copyright-content p {
+  font-size: 18px;
+  font-weight: 100;
+}

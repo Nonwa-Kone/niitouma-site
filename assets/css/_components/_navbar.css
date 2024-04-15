@@ -1,0 +1,26 @@
+.navbar--fixed-top {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  background: var(--secondary);
+  z-index: 1;
+}
+
+.navbar {
+  z-index: 1;
+}
+
+.navbar .container .navbar-brand {
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+
+.navbar .container .collapse .navbar-nav .nav-item .nav-link {
+  /* text-transform: uppercase; */
+  font-weight: 400;
+  transition: all 0.4s ease-in-out;
+}
+
+.navbar .container .collapse .navbar-nav .nav-item .nav-link:hover {
+  color: var(--primary);
+}

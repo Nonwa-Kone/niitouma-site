@@ -1,0 +1,8 @@
+:root {
+  --primary: hsla(249, 100%, 50%, 1);
+  --secondary: hsla(240, 50%, 100%);
+  --dark: #262626;
+  --grey: #525252;
+  --shadow: 8px 10px 20px;
+  --primary-transparent: hsla(249, 100%, 50%, 0.1);
+}

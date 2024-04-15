@@ -1,7 +1,7 @@
 const getAdherent = async () => {
-  const requete = await fetch(`${process.env.API_URL}"/adherent"`);
-  const data = await requete.json();
-  const datas = afficheLesAdherentAuHasard(data, 2);
+  const requete = await fetch(`${process.env.API_URL}"/adherent"`)
+  const data = await requete.json()
+  const datas = afficheLesAdherentAuHasard(data, 2)
   datas.map(adherent => {
     document.getElementById("section-content").innerHTML += `
         <div class="row mb-4 p-lg-5 p-md-3 shadow rounded-5 bg-light">
@@ -16,9 +16,9 @@ const getAdherent = async () => {
                 <a href="profil-adherent.html?id_profil=${adherent.id}"><button class="btn btn-primary">Consulter son profil</button></a>
             </div>
         </div>
-        `;
-  });
-};
+        `
+  })
+}
 
 /**
  * Cette fonction permet d'afficher une liste de 10 Adherent sur la page d'accueil au hasard stocker sur le serveur
@@ -27,12 +27,12 @@ const getAdherent = async () => {
  * @return {array} Une liste de 10 Adherent au hasard
  */
 const afficheLesAdherentAuHasard = data => {
-  let newData = data;
+  let newData = data
   // let firstIndex = Math.floor(Math.random() * data.length)
-  let lastIndex = Math.floor(Math.random() * data.length);
+  let lastIndex = Math.floor(Math.random() * data.length)
 
-  newData = newData.slice(lastIndex, -1);
-  return newData;
-};
+  newData = newData.slice(lastIndex, -1)
+  return newData
+}
 
-getAdherent().then(response => response);
+getAdherent().then(response => response)
