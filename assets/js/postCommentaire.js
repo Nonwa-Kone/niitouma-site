@@ -19,7 +19,7 @@ window.addEventListener("DOMContentLoaded", function () {
     }
 
     const result = await fetch(
-      `https://comfortable-shawl-cow.cyclic.app/api/v1/post-comment/${id}`,
+      `http://localhost:3000/api/v1/post-comment/${id}`,
       {
         method: "PATCH",
         mode: "cors",

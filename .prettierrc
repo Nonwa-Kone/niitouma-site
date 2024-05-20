@@ -1,6 +1,6 @@
 {
-    "semi": false,
-    "SimpleQuote": true,
-    "arrowParens": "avoid",
-    "WidthTab": 2
+  "semi": true,
+  "SimpleQuote": true,
+  "arrowParens": "aways",
+  "WidthTab": 2
 }

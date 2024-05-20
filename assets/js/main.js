@@ -7,4 +7,5 @@ window.addEventListener("DOMContentLoaded", function () {
       header.classList.remove(".navbar--fixed-top")
     }
   })
+  document.getElementById('date-current').innerText = new Date().getFullYear();
 })

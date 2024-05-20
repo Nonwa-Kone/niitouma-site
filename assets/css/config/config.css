@@ -25,16 +25,21 @@
   font-weight: 400;
 }
 
-* {
+*,
+::before,
+::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins Regular", sans-serif;
 }
 
+html {
+  font-size: 16px;
+}
+
 body {
   width: 100%;
-  font-size: 16px;
   text-size-adjust: 16px;
   overflow-x: hidden;
 }
@@ -48,4 +53,8 @@ h6 {
   color: var(--dark);
   font-weight: 900;
   font-family: "Poppins Bold", sans-serif;
+}
+
+a {
+  text-decoration: none;
 }

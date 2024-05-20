@@ -5,10 +5,15 @@ import Adherents from "./model/Adherents.js"
 const contentAdherentList = document.getElementById("section-content")
 // Reccuperation des données de nos adherents depuis notre API
 const getData = async () => {
+  const url = new URL(location.href)
+  const profession = url.searchParams.get("profession")
+  const ville = url.searchParams.get("ville")
+  const adherent = url.searchParams.get('adherent')
   const requete = await fetch(
-    `https://comfortable-shawl-cow.cyclic.app/api/v1/adherent`,
+    `http://localhost:3000/api/v1/adherent?profession=${profession}&ville=${ville}&adherent=${adherent}`,
   )
   const data = await requete.json()
+  console.log(data);
   const datas = filterAdherents(data)
   console.log(datas)
 }
@@ -16,17 +21,11 @@ const getData = async () => {
 getData()
 
 const filterAdherents = data => {
-  const url = new URL(location.href)
-  const profession = url.searchParams.get("profession")
-  const ville = url.searchParams.get("ville")
-  console.log({ profession, ville })
-  const result = data.filter(adherent => {
-    return (
-      adherent.profession.toLowerCase() === profession.toLowerCase() &&
-      adherent.ville.toLowerCase() === ville.toLowerCase()
-    )
-  })
-  result.map(adherent => {
+
+  const {adherents, message} = data
+
+  contentAdherentList.innerHTML += `<h1>${message}</h1>`
+  adherents.map(adherent => {
     const newAdherent = new Adherents(
       adherent._id,
       adherent.nom,
@@ -43,7 +42,6 @@ const filterAdherents = data => {
       adherent.commentaire,
       adherent.domaineIntervention,
     )
-
-    contentAdherentList.innerHTML += newAdherent.templateAdherent()
+    contentAdherentList.innerHTML += `${newAdherent.templateAdherent()}`
   })
 }

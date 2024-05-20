@@ -16,6 +16,7 @@ Link des fichiers de configuration du site
 @import url(./_components/_navbar.css);
 @import url(./_components/_button.css);
 @import url(./_components/_footer.css);
+@import url(./_components/_datalist.css);
 
 /* Pages */
 @import url(./_layouts/home.css);

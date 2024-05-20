@@ -1,3 +1,5 @@
+@import url("../config/config.css");
+
 .navbar--fixed-top {
   position: sticky;
   position: -webkit-sticky;
@@ -15,12 +17,41 @@
   letter-spacing: 1px;
 }
 
+.navbar .container .collapse .navbar-nav .nav-item {
+  margin-inline: 1rem;
+}
+
 .navbar .container .collapse .navbar-nav .nav-item .nav-link {
   /* text-transform: uppercase; */
   font-weight: 400;
   transition: all 0.4s ease-in-out;
 }
 
+.navbar .container .collapse .navbar-nav .nav-item .nav-link i {
+  margin-right: 0.7rem;
+}
+
 .navbar .container .collapse .navbar-nav .nav-item .nav-link:hover {
   color: var(--primary);
+}
+
+@media (max-width: 1280px) {
+  .navbar {
+    padding: 0;
+    margin: 0;
+  }
+
+  .navbar .container .collapse .navbar-nav .nav-item {
+    margin-inline: 0.5rem;
+  }
+
+  .navbar .container .collapse .navbar-nav .nav-item .nav-link {
+    font-size: 14px;
+    font-weight: 700;
+    font-family: "Roboto Regular", sans-serif;
+  }
+
+  .navbar .container .collapse .navbar-nav .nav-item .nav-link i {
+    display: none;
+  }
 }

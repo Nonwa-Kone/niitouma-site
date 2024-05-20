@@ -1,13 +1,19 @@
 /* Footer */
 .footer {
-  margin-top: 2rem;
-  padding: 5rem;
+  /* margin-top: 2rem; */
+  padding: 5rem 0 0 0;
   background-color: var(--dark);
   color: var(--secondary);
 }
 
+.list-group-item {
+  background-color: transparent;
+  color: var(--primary);
+}
+
 /* Copyright */
 .copyright {
+  margin-top: 2rem;
   background-color: var(--grey);
   color: var(--secondary);
 }
@@ -20,6 +26,9 @@
 }
 
 .copyright .container .row .copyright-content p {
-  font-size: 18px;
-  font-weight: 100;
+  font-size: 16px;
+  font-weight: 300;
+  font-variant: normal;
+  font-family: serif;
+  letter-spacing: 0.155rem;
 }

@@ -2,7 +2,7 @@ const url = new URL(location.href)
 const id = url.searchParams.get("id_profil")
 const getData = async id => {
   return await fetch(
-    `https://comfortable-shawl-cow.cyclic.app/api/v1/adherent/${id}`,
+    `http://localhost:3000/api/v1/adherent/${id}`,
   )
     .then(res => res.json())
     .then(data => {
